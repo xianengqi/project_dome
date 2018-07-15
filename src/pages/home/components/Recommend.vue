@@ -2,7 +2,7 @@
 <div>
   <div class="recommend-title">热销推荐</div>
   <ul>
-    <li class="item border-bottom" v-for="item in recommendList" :key="item.id">     
+    <li class="item border-bottom" v-for="item in list" :key="item.id">     
         <img class="item-img" :src='item.imgUrl'/>
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -16,28 +16,10 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-      id: '0001',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/be/befd1247aa162e25.img.jpg_200x200_ff64cf65.jpg',
-      title: '孝感爱琴海水上乐园',
-      desc: '穿越近三千年的历史，仿佛就像昨天'
-    },
-    {
-      id: '0002',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/be/befd1247aa162e25.img.jpg_200x200_ff64cf65.jpg',
-      title: '孝感爱琴海水上乐园',
-      desc: '穿越近三千年的历史，仿佛就像昨天'
-    },
-    {
-      id: '0003',
-      imgUrl: 'http://img1.qunarzz.com/sight/p0/1503/be/befd1247aa162e25.img.jpg_200x200_ff64cf65.jpg',
-      title: '孝感爱琴海水上乐园',
-      desc: '穿越近三千年的历史，仿佛就像昨天'
-    }]
-    }
-  }
+  props: {
+    list: Array
+  },
+
 }
 </script>
 <style lang="stylus" scoped>

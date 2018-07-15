@@ -39,9 +39,10 @@ export default {
     },
     getHomeInfoSucc (res) {
       res = res.data
-      if (res.ret && res.data) {
-        const data = res.data
-        this.city = data.city
+      const data = res.data
+      if (res.ret && data) {        
+        
+        this.city = res.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList

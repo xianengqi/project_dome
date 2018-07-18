@@ -11,6 +11,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 
+
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 fastClick.attach(document.body)
